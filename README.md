@@ -45,8 +45,5 @@ An **Online Banking Payment System** built using **HTML, CSS, and JavaScript**, 
 
 ---
 
-## 💻 How to Run Locally
-
-1. Clone the repository:  
-   ```bash
-   git clone https://tanushrisv.github.io/online_banking_payment_system/
+## 🔗 Live Demo
+[View Live Project](https://tanushrisv.github.io/online_banking_payment_system/)
