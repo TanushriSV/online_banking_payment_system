@@ -47,3 +47,6 @@ An **Online Banking Payment System** built using **HTML, CSS, and JavaScript**, 
 
 ## 🔗 Live Demo
 [View Live Project](https://tanushrisv.github.io/online_banking_payment_system/)
+
+
+© 2025 Tanushri S V. All rights reserved.
