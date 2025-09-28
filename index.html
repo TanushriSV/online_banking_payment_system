@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Banking Payment System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Wrap each label/input in a div with class="form-group" -->
+    <section id="register">
+        <h2>Register</h2>
+        <div class="form-group">
+            <label for="new-username">New Username:</label>
+            <input type="text" id="new-username" placeholder="Enter new username">
+        </div>
+        <div class="form-group">
+            <label for="new-password">New Password:</label>
+            <input type="password" id="new-password" placeholder="Enter new password">
+        </div>
+        <button onclick="register()">Register</button>
+        <p>Already have an account? <a href="#" onclick="showLogin()">Login here</a></p>
+    </section>
+    <!-- Login Section -->
+    <section id="login" style="display: none;">
+        <h2>Login</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Enter username">
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter password">
+        <button onclick="login()">Login</button>
+        <p id="login-error" style="color: red;"></p>
+        <p><a href="#" onclick="showForgotPassword()">Forgot Password?</a></p>
+    </section>
+
+    <!-- Main Content (Hidden until login) -->
+    <div id="main-content" style="display: none;">
+        <header>
+            <h1>Online Banking Payment System</h1>
+            <button onclick="logout()" style="float: right;">Logout</button>
+        </header>
+
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('dashboard')">Dashboard</a></li>
+                <li><a href="#" onclick="showSection('payments')">Make Payment</a></li>
+                <li><a href="#" onclick="showSection('transfer')">Fund Transfer</a></li>
+                <li><a href="#" onclick="showSection('history')">Transaction History</a></li>
+                <li><a href="#" onclick="showSection('settings')">Settings</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <!-- Dashboard (Visible by default) -->
+            <section id="dashboard">
+                <h2>Welcome, <span id="user-name"></span></h2>
+                <p>View your account balance, recent transactions, and payment methods.</p>
+            </section>
+
+            <!-- Payments Section (Hidden initially) -->
+            <section id="payments" class="hidden">
+                <h2>Make a Payment</h2>
+                <button onclick="showPaymentForm()">Proceed to Payment</button>
+
+                <div id="payment-form" style="display: none;">
+                    <label for="amount">Amount:</label>
+                    <input type="text" id="amount" placeholder="Enter amount">
+                    <label for="method">Payment Method:</label>
+                    <select id="method">
+                        <option>Credit Card</option>
+                        <option>Debit Card</option>
+                        <option>Bank Transfer</option>
+                        <option>E-Wallet</option>
+                    </select>
+                    <button onclick="makePayment()">Pay Now</button>
+                </div>
+                <p id="payment-success" style="color: green;"></p>
+            </section>
+
+            <!-- Fund Transfer (Hidden initially) -->
+            <section id="transfer" class="hidden">
+                <h2>Fund Transfer</h2>
+                <button onclick="showTransferForm()">Proceed to Transfer</button>
+
+                <div id="transfer-form" style="display: none;">
+                    <label for="recipient">Recipient Account:</label>
+                    <input type="text" id="recipient" placeholder="Enter account number">
+                    <label for="transfer-amount">Amount:</label>
+                    <input type="text" id="transfer-amount" placeholder="Enter amount">
+                    <button onclick="makeTransfer()">Transfer</button>
+                </div>
+                <p id="transfer-success" style="color: green;"></p>
+            </section>
+
+            <!-- Transaction History -->
+            <section id="history" class="hidden">
+                <h2>Transaction History</h2>
+                <ul id="transaction-history"></ul>
+            </section>
+
+            <!-- Settings -->
+            <section id="settings" class="hidden">
+                <h2>Settings</h2>
+                <p>Manage saved payment methods and recurring payments.</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Online Banking Payment System</p>
+        </footer>
+    </div>
+</body>
+</html>

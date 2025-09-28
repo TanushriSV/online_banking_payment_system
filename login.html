@@ -1,0 +1,19 @@
+function login() {
+        let username = document.getElementById("username").value.trim();
+        let password = document.getElementById("password").value.trim();
+    
+        let users = JSON.parse(localStorage.getItem("users")) || {};
+    
+        console.log("Stored users:", users); // Debugging line
+    
+        // Corrected condition
+        if (users[username] && users[username] === password) {
+            console.log("Login successful for:", username); // Debugging line
+            localStorage.setItem("loggedInUser", username);
+            loadDashboard(username);
+        } else {
+            console.log("Invalid credentials for:", username); // Debugging line
+            document.getElementById("login-error").innerText = "Invalid credentials!";
+        }
+    }
+    

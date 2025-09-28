@@ -1,0 +1,197 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    
+}
+
+/* Card Style for Sections */
+section {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px 32px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    margin: 200px auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Form Group for better alignment */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* Center the input box */
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+section label {
+    margin-bottom: 6px;
+    font-weight: 500;
+    text-align: left;
+    width: 100%;
+}
+
+/* Input Box */
+section input, section select {
+    text-align: left;
+    width: 100%;        /* Ensures it fills available space */
+    box-sizing: border-box; /* Prevents padding from breaking width */
+}
+
+section:hover {
+    transform: scale(1.02);
+}
+
+/* Form Inputs */
+input, select, button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+}
+
+input:focus, select:focus {
+    border: 1px solid #007bff;
+}
+
+/* Buttons */
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Hide all sections initially */
+#login, #forgot-password, #main-content {
+    display: none;
+}
+
+/* Navigation Bar */
+nav {
+    background: #007bff;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    display: inline;
+    padding: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Main Content */
+#main-content {
+    width: 90%;
+    max-width: 1000px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin:70px auto 20px auto;
+}
+
+/* Dashboard Section */
+#dashboard {
+    padding: 20px;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #007bff;
+    color: white;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+header button {
+    background: white;
+    color: #007bff;
+    border: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+header button:hover {
+    background: #f4f4f4;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    font-size: 14px;
+}
